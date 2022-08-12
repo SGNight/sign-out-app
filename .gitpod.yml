@@ -6,5 +6,8 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
+  - name: expo account login
+    command: expo login -u your_account -p your_password
+    
   - init: npm install
     command: expo start --tunnel
