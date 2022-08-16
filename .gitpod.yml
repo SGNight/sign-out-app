@@ -5,9 +5,15 @@
 image:
   file: .gitpod.Dockerfile
 
+# Genrate an expo Access Token for your app https://expo.dev/settings/access-tokens
+# add a Environment veriable to your gitpod account https://gitpod.io/variables
+# Name the Environment veriable EXPO_TOKEN and add your Token in Key section
+# use a wildcard for token scope or */* to access it accross all workspaces.
+# Following tasks will launch a new terminal and login to you account everytime you open your workspace.
+
 tasks:
   - name: expo account login
-    command: expo login -u your_account -p your_password
+    command: expo login && expo w
     
   - init: npm install
     command: expo start --tunnel
